@@ -53,12 +53,13 @@ while True:
     frameGray=cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
     # I DO NOT UNDERSTAND WHAT I AM DOING HERE
+    # explainer for this is at lessin 21 11 minute mark. TODO 
     frameGray=cv2.cvtColor(frameGray, cv2.COLOR_GRAY2BGR)
 
     # Stick little moving roi into main frame
     frameGray[sqr_y_start:sql_y_end,sqr_x_start:sql_x_end]=roi
 
-    frameGray=cv2.rectangle(frameGray,(sqr_x_start,sqr_y_start),(sql_x_end,sql_y_end),(0,0,255),1)
+    frameGray=cv2.rectangle(frameGray,(sqr_x_start,sqr_y_start),(sql_x_end,sql_y_end),(0,0,255),2)
 
 
     # Show camera in window and put in upper left of window
