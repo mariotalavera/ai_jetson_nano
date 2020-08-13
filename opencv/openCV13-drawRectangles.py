@@ -13,12 +13,13 @@ def click(event, x, y, flags, params):
     global pntEnd
     # If left mouse is clicked, 
     if event==cv2.EVENT_LBUTTONDOWN:
+        pntEnd=(x,y)
         pntStart=(x,y)
         # evt=event
     if event==cv2.EVENT_LBUTTONUP:
         pntEnd=(x,y)
         # evt=event
-        print('Rectagle goes from',pntStart,'to',pntEnd,'on event',evt)
+        print('Rectagle goes from',pntStart,'to',pntEnd,'on event')
 
 # Setting dims of main window and mirroring image
 dispW=640
