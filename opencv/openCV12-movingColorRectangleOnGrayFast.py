@@ -7,8 +7,8 @@ sqrW=int(0.2*dispW)
 sqrH=int(0.2*dispH)
 xStartPos=0
 yStartPos=0
-dx=3
-dy=3
+dx=2
+dy=2
 
 # USB camera setup
 cam=cv2.VideoCapture(0)
@@ -30,7 +30,6 @@ while True:
     xEndPos=xStartPos+sqrW
     yEndPos=yStartPos+sqrH
                
-
     # Read camera and mirror frame
     ret, frame=cam.read()
     frame=cv2.flip(frame,2)
