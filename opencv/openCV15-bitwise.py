@@ -26,6 +26,7 @@ cam.set(cv2.CAP_PROP_FRAME_HEIGHT,dispH)
 while True:
     # Read camera
     ret, frame=cam.read()
+    frame=cv2.flip(frame,2)
 
     cv2.imshow('img1', img1)
     cv2.moveWindow('img1',0,510)

@@ -17,6 +17,7 @@ cam.set(cv2.CAP_PROP_FRAME_HEIGHT,dispH)
 while True:
     # Read camera
     ret, frame=cam.read()
+    frame=cv2.flip(frame,2)
     
     # Show camera in window and move
     cv2.imshow('usbcam',frame)
